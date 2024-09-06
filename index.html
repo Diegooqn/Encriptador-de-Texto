@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Encriptador de texto</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <img src="assets/Logo.png" alt="Logo">
+    </header>
+    <main class="main">
+        <div class="caja-texto">
+            <textarea id="entradaTexto" class="entrada-de-texto" type="text" placeholder="Ingrese el texto aqui"></textarea>
+        </div>
+
+        <section class="zona-derecha">
+            <div class="contenido-muneco" id="contenidoMuneco">
+                <img class="imagen-muneco" src="./assets/Muneco.png" alt="Muñeco">
+                <h1 class="h1">Ningún mensaje ha sido encontrado</h1>
+                <p class="p">Ingresa el texto que desees encriptar o desencriptar</p>
+            </div>
+            <div class="contenedor-resultado">
+                <p id="resultado" class="resultado"></p>
+            </div>
+            <div class="contenedor-copiar">
+                <button style="display: none;" class="copiar" id="copiar" onclick="copiar()">Copiar</button>
+            </div>
+        </section>
+
+        <div class="botones">
+            <div class="ajustar">
+                <p class="texto-alerta">
+                    <img src="assets/Group.png">
+                    Solo letras minúsculas y sin acentos
+                </p>
+                <div class="botones-gap">
+                    <button class="boton-encriptar" onclick="procesarTexto('encriptar')">Encriptar</button>
+                    <button class="boton-desencriptar" onclick="procesarTexto('desencriptar')">Desencriptar</button>
+                </div>
+            </div>
+        </div> 
+    </main>
+    <script src="app.js"></script>
+</body>
+</html>
